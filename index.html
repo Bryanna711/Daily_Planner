@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" 
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -28,9 +32,157 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-    </div>
+
+    
+
+    <div class="container">  
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour" id= "12AM" >12AM </p>
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+      
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour" id= "1AM">01AM </p>
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "2AM">02AM </p>
+        <textarea class = "textarea"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>  
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour" id= "3AM">03AM </p>
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>  
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour" id= "4AM">04AM </p>    
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour" id= "5AM">05AM </p>      
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "6AM">06AM </p>      
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "7AM">07AM </p>     
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "8AM">08AM </p>
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "9AM">09AM </p>  
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "10AM">10AM</p>     
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "11AM">11AM</p>      
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+      
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "12PM">12PM</p>     
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>  
+      
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "1PM">01PM </p>  
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between ">
+        <p class="hour"id= "2PM">02PM </p>
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "3PM">03PM </p>
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "4PM">04PM </p>
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "5PM">05PM </p>
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour" id= "6PM">06PM </p>
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "7PM">07PM </p>
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "8PM">08PM </p>
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour" id= "9PM">09PM </p>
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "10PM">10PM</p>
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <div class = "d-flex flex-row justify-content-between">
+        <p class="hour"id= "11PM">11PM</p>
+        <textarea class = "text"></textarea>
+        <button class="saveBtn" type="button" id="saveBtn">Save</button>
+      </div>
+
+    </div> -->
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
