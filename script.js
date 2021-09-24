@@ -6,6 +6,21 @@ var now = moment().format("H")
 
 var hourClass = $(".hour");
 var textArea = $("textarea");
+var saveBtn = $(".saveBtn");
+
+
+saveBtn.on("click",function(event){
+    console.log(event.target.value);
+    localStorage.setItem("reminders",textArea.value);
+    }
+)
+
+textArea.on("input",function (event){
+    console.log(event.target.value);
+    
+})
+
+
 
 
 textArea.each(function(){
@@ -15,33 +30,33 @@ textArea.each(function(){
     else if (now<9){
         ($(this).addClass("future"));
     }
-    else if (now === 9){
-        ($("9").addClass("present"));
-    }
-    else if (now ===10){
-        ($("10").addClass("present"));
-    }
-    else if (now === 11){
-        ($("11").addClass("present"));
-    }
-    else if (now === 12){
-        ($("12").addClass("present"));
-    }
-    else if (now === 1){
-        ($("1").addClass("present"));
-    }
-    else if (now === 2){
-        ($("2").addClass("present"));
-    }
-    else if (now === 3){
-        ($("3").addClass("present"));
-    }
-    else if (now === 4){
-        ($("4").addClass("present"));
-    }
-    else if (now === 5){
-        ($("5").addClass("present"));
-    }
+    // else if (now === 9){
+    //     ($("9").addClass("present"));
+    // }
+    // else if (now ===10){
+    //     ($("10").addClass("present"));
+    // }
+    // else if (now === 11){
+    //     ($("11").addClass("present"));
+    // }
+    // else if (now === 12){
+    //     ($("12").addClass("present"));
+    // }
+    // else if (now === 1){
+    //     ($("1").addClass("present"));
+    // }
+    // else if (now === 2){
+    //     ($("2").addClass("present"));
+    // }
+    // else if (now === 3){
+    //     ($("3").addClass("present"));
+    // }
+    // else if (now === 4){
+    //     ($("4").addClass("present"));
+    // }
+    // else if (now === 5){
+    //     ($("5").addClass("present"));
+    // }
 })
 
 
