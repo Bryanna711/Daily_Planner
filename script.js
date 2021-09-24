@@ -1,6 +1,7 @@
 //sets current date and time
 var today = moment();
 $("#currentDay").text(today.format("MMM Do, YYYY mm:ss"));
+
 // sets variable for current hour to be used in comparison to time slot on daily planner
 var now = moment().format("H");
 console.log(now)
@@ -8,7 +9,7 @@ console.log(now)
 var textArea = $("textarea");
 var saveBtn = $(".saveBtn");
  
-// 
+// Sets variables to time to determine if the time is before the current time (boolean)
 var hour9 = moment(9,"H").isBefore();
 console.log (hour9);
 
@@ -40,15 +41,16 @@ console.log(hour16)
 var hour17 = moment(17,"H").isBefore();
 console.log(hour17)
 
+//create an array of the boolean values
 var hourTime=[hour9, hour10, hour11, hour12, hour13, hour14, hour15, hour16, hour17];
 
-
+//use boolean values to alter the class stylings via conditional statements
 textArea.each(function(i) {
     var time = hourTime[i];
-    var currentTime = $(this).parent().attr("id");
+    var currentTime = ($(this).parent().attr("id"));
 
     if(currentTime == now){
-        $(this).toggleclass("present");
+        $(this).toggleClass("present");
     }
     else if (time){
         $(this).toggleClass("past");
@@ -58,12 +60,14 @@ textArea.each(function(i) {
     }
     //^^^^present is still not working
 
+    //writes the stored data of reminders to the page
     $(this).val(localStorage.getItem(currentTime))
 })
 
 
 saveBtn.on("click",storeReminders);
 
+//stores the reminders to local storage with key and value
 function storeReminders(){
     var reminders = ($(this).siblings('textarea').val());
     var dayHour = ($(this).parent().attr("id"));
