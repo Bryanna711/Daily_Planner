@@ -1,6 +1,3 @@
-// var d = new Date();
-// var n =d.getHours();
-// console.log(n);
 
 var today = moment();
 $("#currentDay").text(today.format("MMM Do, YYYY mm:ss"));
@@ -67,18 +64,14 @@ textArea.each(function(i) {
 })
 
 
-saveBtn.on("click",function(event){
+saveBtn.on("click",function(){
 console.log($(this).siblings('textarea').val());
-;
-  textArea.textContent = textArea.value ;
-   localStorage.setItem("reminders",textArea.value);
-    }
- )
-// ^^^^^textArea.value is undefined....????
-textArea.on("input",function (event){
-    console.log(event.target.value);
-;
-    
-})
+storeReminders();
+});
 
+function storeReminders(){
+    var reminders = $(this).siblings('textarea').val();
+    var dayHour = $(this).parent().attr("id");
 
+    localStorage.setItem(dayHour, reminders);
+}
